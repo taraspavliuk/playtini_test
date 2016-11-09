@@ -1,0 +1,465 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i,800&subset=cyrillic');
+
+@font-face {
+    font-family: "NautilusPompiliusRegular";
+    src: url("../fonts/NautilusPompiliusRegular/NautilusPompiliusRegular.eot");
+    src: url("../fonts/NautilusPompiliusRegular/NautilusPompiliusRegular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/NautilusPompiliusRegular/NautilusPompiliusRegular.woff") format("woff"),
+    url("../fonts/NautilusPompiliusRegular/NautilusPompiliusRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    position: relative;
+    z-index: 1;
+    min-height: 965px;
+    background: #169399;
+}
+
+.clearfix:after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.banner:before {
+    content: '';
+    position: absolute;
+    background-image: url(../img/bg-big.png);
+    background-size: cover;
+    width: 1244px;
+    height: 906px;
+    top: 24px;
+    left: -197px;
+}
+
+.container {
+    position: relative;
+    width: 1024px;
+    padding-left: 9px;
+    margin: 0 auto;
+}
+
+.logo {
+    margin-top: 10px;
+    float: left;
+}
+
+.navigation {
+    float: right;
+    margin-top: 36px;
+    font-size: 0;
+    z-index: 1;
+}
+
+.navigation > li {
+    display: inline-block;
+    list-style: none;
+    margin: 0px 8px 0 8px;
+}
+
+.navigation > li:first-child {
+    margin: 0 5px 0 0;;
+}
+
+.navigation > li a {
+    padding: 3px 21px 4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    color: #7de5ea;
+    letter-spacing: 0;
+    background-color: #0d585c;
+    transition: 0.8s;
+}
+
+.navigation > li.active a {
+    background-color: #5cbec2;
+    color: #000;
+}
+
+.navigation > li a:hover {
+    background-color: #5cbec2;
+    color: #000;
+}
+
+.form {
+    padding-top: 17px;
+    float: right;
+    position: relative;
+}
+
+.form h1 {
+    font-family: "NautilusPompiliusRegular";
+    font-size: 72px;
+    color: #fff;
+    text-shadow: 0 5px 5px #0b494c;
+    text-align: right;
+    margin-right: 30px;
+    letter-spacing: 0px;
+}
+
+.form-box {
+    background-color: rgba(0, 0, 0, .5);
+    border: 1px solid #39f7ff;
+    padding: 41px 59px;
+    margin-right: 15px;
+    margin-top: 23px;
+}
+
+.box-title {
+    font-size: 18px;
+    color: #77faff;
+    font-weight: 300;
+    padding-left: 32px;
+}
+
+.box-price {
+    font-size: 32px;
+    color: #fff;
+    font-weight: 700;
+    padding-top: 6px;
+    padding-left: 16px;
+    margin-bottom: 24px;
+}
+
+input.form-control {
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    background: #e1e5ed;
+    color: #575a61;
+    border: none;
+    border-radius: 4px;
+    height: 48px;
+    width: 316px;
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+    outline: none;
+    margin-bottom: 10px;
+    margin-left: 7px;
+}
+
+.box-currency {
+    padding-top: 7px;
+}
+
+.currency__title {
+    display: inline-block;
+    font-size: 18px;
+    color: #77faff;
+    margin-left: 6px;
+    margin-right: 12px;
+}
+
+label.white {
+    color: #fff;
+    letter-spacing: 0.2px;
+    margin-right: 17px;
+    font-size: 18px;
+}
+
+.radioBtn {
+    border: none;
+    vertical-align: middle;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+}
+
+.secondBtn {
+    margin-left: 18px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label span {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 7px 0 0;
+    vertical-align: middle;
+    background: url(../img/radio_disabled.png) left top no-repeat;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label span {
+    background: url(../img/radio_active.png) left top no-repeat;
+}
+
+button {
+    padding: 0;
+    margin: 0;
+}
+
+.BgBtn {
+    margin-top: 13px;
+    width: 330px;
+    height: 82px;
+    background: url(../img/registration_button.png) no-repeat;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding-bottom: 14px;
+    position: relative;
+    z-index: 9999 !important;
+}
+
+.BgBtn span {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-shadow: 1px 2px 1px #180100;
+}
+
+.BgBtn:hover::before {
+    content: "";
+    position: absolute;
+    background: url(../img/registration_button-hover.png) no-repeat;
+    left: -19px;
+    top: -17px;
+    width: 369px;
+    height: 108px;
+    z-index: -1;
+}
+
+.social-wrapper {
+    margin-top: 9px;
+    margin-left: 66px;
+}
+
+.social-links li {
+    display: inline-block;
+    margin-left: 6px;
+    width: 42px;
+    height: 42px;
+    background-image: url('../img/social-icons.png');
+    background-repeat: no-repeat;
+}
+
+.social-links li:first-child {
+    margin-left: 0px;
+}
+
+.social-links a {
+    display: block;
+    height: 100%;
+    text-align: center;
+    color: transparent;
+    transition: 0.8s;
+}
+
+.vk {
+    background-position: 0 0;
+}
+
+.odnoklasniki {
+    background-position: -44px 0px;
+}
+
+.mailRu {
+    background-position: -88px 0px;
+}
+
+.fb {
+    background-position: -132px 0px;
+}
+
+.vk:hover, .odnoklasniki:hover, .mailRu:hover, .fb:hover {
+    opacity: 0.5;
+}
+
+.less__info {
+    margin-top: 14px;
+}
+
+.less__text {
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #77faff;
+    margin-bottom: 0;
+}
+
+.less__text a {
+    color: #fff;
+}
+
+.less__text a:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    body {
+        width: 768px;
+        background: #004346;
+    }
+
+    .desktop {
+        display: none !important;
+    }
+
+    .navigation{
+        margin-right:19px;
+    }
+    .navigation .nav__item, .navigation .nav__item:first-child {
+        margin: 0;
+        font-size: 15px;
+    }
+
+    .navigation .nav__item a {
+        padding: 3px 14px;
+    }
+
+    .container {
+        width: 768px;
+        padding: 0 30px;
+    }
+
+    .banner:before {
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 918px;
+        overflow: hidden;
+
+        background-image: url("../img/bg-mini.jpg");
+        background-position: center center;
+        background-size: auto;
+        background-repeat: no-repeat;
+    }
+
+    .form {
+        margin: 707px 0 0;
+        padding: 30px 50px;
+        width: auto;
+        float: none;
+    }
+
+    .form h1 {
+        font-size:100px;
+        text-align: center;
+        margin-bottom: 22px;
+    }
+
+    .form-box {
+        margin: 0;
+        padding: 56px 30px;
+        text-align: center;
+    }
+
+    .form-box .form-control {
+        margin: 20px auto;
+        height: 68px;
+        width: 470px;
+        font-size: 24px;
+    }
+    .box-title {
+        padding-left: 0;
+        font-size: 26px;
+    }
+    .box-price {
+        font-size: 48px;
+        color: #fff;
+        padding-top: 9px;
+        padding-left: 0;
+        margin-bottom: 37px;
+    }
+    .box-currency {
+        padding-top: 11px;
+    }
+    .currency__title {
+        display: inline-block;
+        font-size: 24px;
+        margin-right: 12px;
+    }
+    label.white {
+        font-size: 24px;
+        margin-right: 27px;
+    }
+
+    .radioBtn {
+        height: 40px;
+        width: 40px;
+    }
+    input[type="radio"] + label span {
+        width: 40px;
+        height: 40px;
+        background: url(../img/radio-mini_disabled.png) left top no-repeat;
+    }
+
+    input[type="radio"]:checked + label span {
+        background: url(../img/radio-mini_active.png) left top no-repeat;
+    }
+
+    .BgBtn {
+        margin-top: 32px;
+        width: 486px;
+        height: 111px;
+        background: url(../img/registration_button-mini.png) no-repeat;
+    }
+
+    .BgBtn span {
+        display: none;
+    }
+
+    .BgBtn:hover::before {
+        background: url(../img/registration_button-mini-hover.png) no-repeat;
+        left: -12px;
+        top: -20px;
+        width: 511px;
+        height: 142px;
+        z-index: -1;
+    }
+    .social-wrapper {
+        margin-top: 19px;
+         margin-left: 0;
+    }
+    .social-links li {
+        margin-left: 17px;
+        width: 66px;
+        height: 66px;
+        background-image: url(../img/social-icons-mini.png);
+        background-repeat: no-repeat;
+    }
+    .vk {
+        background-position: 0 0;
+    }
+
+    .odnoklasniki {
+        background-position: -82px 0px;
+    }
+
+    .mailRu {
+        background-position: -164px 0px;
+    }
+
+    .fb {
+        background-position: -246px 0px;
+    }
+    .less__info {
+        margin-top: 20px;
+    }
+    .less__text {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
